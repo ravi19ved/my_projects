@@ -1,0 +1,57 @@
+## Abstract
+{A concise summary of the research, including the study's purpose, methodology, key findings, and conclusions.}
+
+{Typically 150-250 words long.}
+
+
+## Introduction
+{Provides background information on the topic, defining key concepts in physical oceanography (e.g., ocean currents, thermohaline circulation, waves).}
+
+{States the research problem, hypothesis, and objectives.}
+
+{Justifies the importance of the study in the broader context of ocean science.}
+
+## Literature Review 
+{Summarizes previous studies related to the topic, identifying knowledge gaps.}
+
+{Discusses theoretical and observational frameworks used in past research.}
+
+{Establishes the foundation upon which the study is built.}
+
+## Methods & Data Collection
+{Describes the methodology used, such as observational data (satellites, buoys, ship-based measurements) or numerical modeling.}
+
+{Explains data sources, instrumentation, and sampling techniques.}
+
+{Details the analytical methods used (e.g., statistical modeling, spectral analysis, machine learning applications).}
+
+## Results
+{Presents findings in an organized manner using graphs, charts, and tables.}
+
+{Includes key oceanographic parameters like sea surface temperature, salinity, current velocities, and wave height.}
+
+{Avoids interpretation—only reports observed results.}
+
+## Discussion
+{Interprets the results in relation to the research question and previous studies.}
+
+{Explains physical processes underlying the observed patterns.}
+
+{Identifies potential sources of error or uncertainty.}
+
+{Suggests implications for climate, marine ecosystems, or coastal management.}
+
+## Conclusion & Recommendations
+{Summarizes key findings and their broader impact.}
+
+{Suggests directions for future research in physical oceanography.}
+
+{May include policy or environmental management recommendations.}
+## References
+{Lists all cited works in a standardized citation style (APA, IEEE, or another format).}
+
+{Ensures proper attribution of previous research.}
+
+## Appendices
+{Includes supplementary materials such as raw data, additional figures, or detailed methodological explanations.}
+
