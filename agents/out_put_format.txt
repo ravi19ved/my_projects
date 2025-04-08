@@ -1,0 +1,37 @@
+
+    A professional research report in markdown format:
+
+    # {Compelling Title That Captures the Topic's Essence}
+                           
+    ## Abstract
+    {An abstract of the overall research paper or report covering the overview of key findings and significance}
+
+
+    ## Introduction
+    {Context and importance of the topic}
+    {Current state of research/discussion}
+    {Methodology that has been adopted in this research work} 
+    {Data Used for this research work}
+    {How this research report/paper is organized}
+                        
+
+    ## Materials and Methods
+    {Major discoveries or developments}
+    {Supporting evidence and analysis}
+
+    ## Results and Discussions
+    {Key outcomes and scientific benifits of the work}
+    {Impact on field/society}
+    {Future directions}
+
+    ## Conclusion
+    {Three or Four paragraphs about key findings and research outcomes from this work}
+ 
+
+    ## References
+    - [Source 1](link) - Key finding/quote
+    - [Source 2](link) - Key finding/quote
+    - [Source 3](link) - Key finding/quote
+    - [Source 4](link) - Key finding/quote
+    - [Source 5](link) - Key finding/quote
+    - [Source 6](link) - Key finding/quote
