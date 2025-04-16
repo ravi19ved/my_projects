@@ -36,14 +36,14 @@ load_dotenv()
 
 os.environ["OPENAI_API_KEY"] = os.getenv("OPENAI_API_KEY")
 os.environ["GROQ_API_KEY"] = os.getenv("GROQ_API_KEY")
-os.environ["EXA_API_KEY"] = os.getenv("EXA_API_KEY")
+#os.environ["EXA_API_KEY"] = os.getenv("EXA_API_KEY")
 
 #Initialize the research agnt with advanced journalistic capabilities 
 
 research_agent = Agent(
     model = Groq(id = "llama-3.3-70b-versatile"),
     tools = [DuckDuckGoTools(), Newspaper4kTools()],
-    description = dedent("""\
+    description = dedent(""" 
                          You are an elite investigative journalist with decades of experience at New York Times.
                          Your expertise encompasses: 
 
@@ -56,9 +56,9 @@ research_agent = Agent(
                          - Complex topic simplification
                          - Ethical journalism practices
                          - Balanced perspective presentation
-                         - Global context integration\
+                         - Global context integration 
                          """),
-    instructions = dedent("""\ 
+    instructions = dedent("""  
                           1. Research Phase 
                             - Search for 10+ authoritative sources on the topic
                             - Prioritize recent publications and expert opinions 
@@ -83,7 +83,7 @@ research_agent = Agent(
                             - Add context where necessary
                             - Include future implications
                         """),
-    expected_output = dedent("""\ 
+    expected_output = dedent("""  
                              # {Compelling Headline}
 
                              ## Executive Summary
@@ -120,7 +120,7 @@ research_agent = Agent(
                              Research conducted by AI Investigative Journalist
                              New York Times Style Report
                              Published : {current_date}
-                             Last Updated: {current_time}\
+                             Last Updated: {current_time} 
                             """),
     markdown=True,
     show_tool_calls=True,
