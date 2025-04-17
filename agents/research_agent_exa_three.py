@@ -46,7 +46,7 @@ os.environ["EXA_API_KEY"] = os.getenv("EXA_API_KEY")
 research_scholar = Agent(
     model = OpenAIChat(id="gpt-4o"),
     tools = [
-        #ArxivTools(search_arxiv=True, read_arxiv_papers=True, download_dir="C:\\Users\\ravic\\projects\\tmp\\download_papers"),
+        ArxivTools(search_arxiv=True, read_arxiv_papers=True, download_dir="C:\\Users\\ravic\\projects\\tmp\\download_papers"),
         ExaTools(start_published_date=datetime.now().strftime("%Y-%m-%d"),type="keyword"
                  )
     ],
@@ -79,7 +79,7 @@ research_scholar = Agent(
                         
                           3. Report Structure
                             - Create an engaging academic title
-                            - Include references while writing. 
+                            - Include references while writing the report. 
                             - Write a compelling abstract
                             - Present methodology clearly
                             - Discuss findings systematically
@@ -149,11 +149,17 @@ research_scholar = Agent(
 
 # Example usage with academic research request
 
+prompt = dedent("""\\Write a research paper titled "The Role of Autonomous Underwater Vehicles in Coastal Oceanography". Focus on:
+- The evolution and importance of AUVs.
+- Comparison of AUVs like Slocum gliders, SeaGliders, and hybrid ROVs.
+- Recent missions and case studies.
+- Challenges in coastal operations.
+- A conclusion about future directions.
+
+Include APA citations throughout and provide a reference list at the end.\\""")
+
 if __name__=="__main__":
-    research_scholar.print_response(
-        "Under Water AUV and Gliders application in Indian Ocean Region", 
-        stream=True,
-)
+    research_scholar.print_response(prompt, stream=True)
 
 # Advanced research topics to explore:
 """
