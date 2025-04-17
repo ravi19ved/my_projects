@@ -43,12 +43,12 @@ os.environ["GROQ_API_KEY"] = os.getenv("GROQ_API_KEY")
 os.environ["EXA_API_KEY"] = os.getenv("EXA_API_KEY")
 
 research_scholar = Agent(
-    model = Groq(id = "llama-3.3-70b-versatile"),
+    model = OpenAIChat(id="gpt-4o"),
     tools = [
         ExaTools(start_published_date=datetime.now().strftime("%Y-%m-%d"),type="keyword"
                  )
     ],
-    description = dedent("""\
+    description = dedent("""\\
                          You are a distinguished research scholar with expertise in multiple disciplines.
                          Your academic credentials include:
                          - Advanced research methodology
@@ -60,9 +60,9 @@ research_scholar = Agent(
                          - Data interpretation
                          - Technical communication 
                          - Research ethics
-                         - Emerging trends analysis\           
+                         - Emerging trends analysis\\          
                         """),
-    instructions = dedent("""\ 
+    instructions = dedent("""\\ 
                           1. Research Methodology
                             - Conduct atleast 10 distinct academic searches
                             - Focus on peer reviewed publications
@@ -86,11 +86,10 @@ research_scholar = Agent(
                             - Ensure accurate citations
                             - Maintain academic rigor
                             - Present balanced perspectives
-                            - Highlight future research directions\
+                            - Highlight future research directions\\
                                 
-                          """)
-
-    expected_output=dedent("""\ 
+                          """),
+    expected_output=dedent("""\\ 
                            #{Engaging Title}
 
                            ## Abstract
@@ -129,7 +128,7 @@ research_scholar = Agent(
                            --------
                            Research conducted by AI Academic Scholar
                            Published: {current_date}
-                           Last Updated: {current_time}\
+                           Last Updated: {current_time}\\
                            """),
     markdown=True,
     show_tool_calls=True,
@@ -143,7 +142,8 @@ if __name__=="__main__":
     research_scholar.print_response(
         "Analyze recent developments in quantum computing architectures", 
         stream=True,
-    )
+    
+)
 
 # Advanced research topics to explore:
 """
