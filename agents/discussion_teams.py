@@ -2,8 +2,8 @@ import asyncio
 from textwrap import dedent
 
 from agno.agent import Agent 
-from agno.models.openai import OpenAIChat 
-from agno.team.team import Team 
+from agno.models.openai import OpenAIChat
+from agno.team.team import Team
 from agno.tools.duckduckgo import DuckDuckGoTools
 from agno.tools.arxiv import ArxivTools
 from agno.tools.googlesearch import GoogleSearchTools
@@ -105,8 +105,8 @@ agent_team = Team(
         ],
         success_criteria="The team has reached a consensus.",
         show_tool_calls=True,
-        send_team_context_to_members=True,
-        update_team_context = True,
+        #send_team_context_to_members=True,
+        #update_team_context=True,
         debug_mode=True,
         markdown=True,
         show_members_responses=True,
