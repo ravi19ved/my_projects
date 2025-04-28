@@ -5,8 +5,8 @@
 import csv
 import re
 
-input_file = 'C:\Users\ravic\Desktop\Desktop\Glider_Tracks\1129_Mauritius\DLD4345449615463055265\Surfacing.csv'       # Replace with your actual file name
-output_file = 'C:\Users\ravic\Desktop\Desktop\Glider_Tracks\1129_Mauritius\DLD4345449615463055265\parsed_output.csv'  # Final output file location and name
+input_file = 'C:\Users\ravic\Desktop\Desktop\Glider_Tracks\1129_Mauritius\DLD4345449615463055265\Surfacing.csv'   # Replace with your actual file name
+output_file = 'C:\Users\ravic\Desktop\Desktop\Glider_Tracks\1129_Mauritius\DLD4345449615463055265\parsed_output.csv'    # Output file location 
 
 # Regex to extract the GPS time
 gps_time_regex = re.compile(r'Time of GPS Position:\s*(\d{4}-\d{2}-\d{2}) (\d{2}:\d{2}:\d{2})')
@@ -30,3 +30,5 @@ with open(input_file, 'r', encoding='utf-8') as infile, open(output_file, 'w', n
                 writer.writerow([lat, lon, date, time])
         except IndexError:
             continue  # Skip lines that don't have expected format
+
+#  Need to test this programme. 
