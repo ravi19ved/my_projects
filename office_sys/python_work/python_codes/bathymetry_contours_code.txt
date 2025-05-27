@@ -1,0 +1,44 @@
+import numpy as np
+import xarray as xr
+import matplotlib.pyplot as plt
+import geopandas as gpd
+
+ds = xr.open_dataset(f"{filepath}\\{filename_bathymetry}")
+
+fig = plt.figure(figsize=(100,80))
+ax = fig.add_subplot(111)
+
+X, Y = np.meshgrid(ds['LON'].sel(LON=slice(72,80)).values, ds['LAT'].sel(LAT=slice(6,15)).values)
+cf = ax.contourf(X, Y, ds['ROSE'].sel(LON=slice(72,80), LAT=slice(6,15)).values,
+            levels=[-1000,-500,-100,-80,-60,-50,-40,-30,-20,-10,0,10,20,50,100,500,1000],
+            # levels=[-0.1,0,10,20,50,100,500,1000],
+            colors=[
+                "#3ba0f5", "#72bbf7", "#7ec0f7", "#91cdff", "#a4d0f5", "#aed5f5",
+                "#badbf7", "#c8e3fa", "#d6ecff", "#def0ff", "#18a315", "#49fa46",
+                "#94ff6e", "#b1ff6e", "#e7ff6e", "#ffec6e", "#ffd36e",
+            ],
+            # colors=[
+            #     "#3ba0f5","#18a315", "#49fa46",
+            #     "#94ff6e", "#b1ff6e", "#e7ff6e", "#ffec6e", "#ffd36e",
+            # ],
+            # cmap=cmap, 
+            extend="both")
+
+# Our data range extends outside the range of levels; make
+# data below the lowest contour level blue, and above the
+# highest level red:
+cf.cmap.set_under('#3ba0f5')
+# cf.cmap.set_over('red')
+
+cbar = fig.colorbar(cf, ax=ax)
+cbar.set_label('Height in meters')
+cbar.set_ticks([-1000,-500,-100,-80,-60,-50,-40,-30,-20,-10,0,10,20,50,100,500,1000])
+
+
+ax.set(
+    xlabel="Longitude",
+    ylabel="Latitude",
+    title="Bathymetry",
+)
+
+plt.show()

@@ -1,0 +1,16 @@
+
+str1 = 'My name is {fn} {ln} {sn} Whats yours?'
+str2 =  "It's a string literal"
+
+first = 'Ravi'
+second = 'Chandra'
+surname = 'Vedula'
+print(str1.format(fn=first, ln =second, sn = surname))
+
+print('{0:.3f}'.format(1.0/3), end = '')
+print('{0:_^21}'.format('hello'), end='')
+print('test')
+
+print('This is the first line \n This is the second line and \t this is the tab')
+
+print(r'New line if you use raw string \n doesnot matter')
