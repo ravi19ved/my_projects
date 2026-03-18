@@ -1,0 +1,187 @@
+\documentclass[instructions]{StylesAndSettings/uqthesis}
+%\documentclass[final]{StylesAndSettings/uqthesis} 
+
+% set how close to the bottom of the page the page number is. Measurement is indicating distance from the last line of text
+\setlength{\footskip}{9mm}
+
+
+%*************************************
+% FOR YOUR FINAL THESIS
+%*************************************
+
+%IMPORTANT! 
+%The default document class (above - line 1 & 2) for the template is \documentclass[instructions]{uqthesis} - this document class will show instructional material and examples relevant to the preliminary material in the compiled PDF preview. THESE INSTRUCTIONS ARE FOR YOUR REFERENCE ONLY AND ARE NOT TO BE INCLUDED IN YOUR FINAL THESIS! 
+
+%To turn off these instructions in your final thesis you MUST use the document class \documentclass[final]{uqthesis} 
+%To activate the final thesis document class you must UN-COMMENT THIS DOCUMENT CLASS (remove the % from the start of line 2) and comment out the instructional document class on line 1 (add % to the start of line 1). 
+
+%*************************************
+% Introduction to template
+%*************************************
+
+%This is The University of Queensland Graduate School Official LaTeX Thesis template.
+
+%Be sure to observe the content of comments within the source code, these are prefaced with a percentage symbol.
+%Most important instructions have been CAPITALISED.
+%To uncomment an inactive command (if required) remove the % from in front of the command.
+
+%Please see the README for more information.
+
+%This file loads the necessary packages, sets the page styles, and defines required macros.
+%Edit this if you are comfortable with LaTeX.
+
+%Other tweaks can be made in StylesAndSettings/uqthesis.cls, but change these at your own risk!
+
+%See README for version.
+
+%You must have the memoir class installed.
+
+\input{StylesAndSettings/LaTexPackages.tex}
+
+% ***************************************************
+% Title page
+% ***************************************************
+
+%***THESIS TITLE***
+%Use Sentence Case (capitalise only the first word and proper nouns).
+\title{Thesis Title}
+
+%***YOUR NAME***
+%Do not include initials or middle names. Do not include your supervisor(s)' name(s).
+\author{First name Family name}
+%***YOUR CURRENT DEGREES***
+%Use abbreviations. Do not include the date or location of your degree. Do not include the degree for which this thesis is being submitted.
+\currentdegrees{Candidate’s academic degrees}
+
+%***ORCID ID***
+%Add and hyperlink your ORCID
+\orcid{\href{add your ORCID url here}{Candidate's ORCID}}
+
+%***YEAR OF SUBMISSION***
+\date{\{year\}}
+%***TYPE OF DEGREE***
+\submittedfor{Master of Philosophy \{Doctor of Philosophy\} \{Doctor of Veterinary Clinical Science\}}
+
+
+%***YOUR SCHOOL***
+%Use Title Case (capitalise every word which is not a conjunction or preposition).
+%See - https://blog.apastyle.org/apastyle/2012/03/title-case-and-sentence-case-capitalization-in-apa-style.html - for help.
+\school{\{Name of the Enrolling Unit\}}
+
+
+%HBAR fix added by Michael
+% (this issue is related to the use of the mathptmx package)
+\begin{document}
+\renewcommand{\hbar}{\mathchar'26\mkern-7.5mu h}
+
+
+\frontmatter
+% Assemble title page
+\maketitle
+\clearpage
+\setcounter{page}{1}
+
+% ***************************************************
+% How to Use this Template Page - This Section Will be hidden when you change the document class
+%****************************************************
+
+\begin{instructional}
+\pagestyle{plain}
+\section*{How to Use this Template}
+\normalfont
+%Open abstract.tex to edit
+%\input{./PreliminaryPages/HowToUseTemplate.tex}
+\input{HowToUseTemplate.tex}
+
+\clearpage
+\end{instructional}
+% ***************************************************
+
+% ***************************************************
+% Preface
+%****************************************************
+\pagestyle{plain}
+\section*{Abstract}
+\normalfont
+%Open abstract.tex to edit
+\input{./PreliminaryPages/Abstract.tex}
+
+\clearpage
+% ***************************************************
+\section*{Declaration by Author}
+%DO NOT EDIT.
+\input{./PreliminaryPages/Authordeclaration.tex}
+
+\clearpage
+%YOU MUST EDIT THIS DOCUMENT.
+\input{./PreliminaryPages/Preliminary.tex}
+\let\cleardoublepage=\clearpage % this removes a blank page that appears when you place a prelim page after the TOC
+
+% ***************************************************
+% Thesis Content
+%****************************************************
+
+\mainmatter
+%Each chapter is a separate .tex file. Use \input to load them here, as demonstrated below for Chapter 1 and Chapter 2.
+%We recommend keeping each in a separate subfolder, with its accompanying figures, etc. This is how the template is currently structured.
+%If you wish to divide your thesis into parts (each containing multiple chapters), us the \part{} command.
+
+%CHAPTER 1
+\input{./Chapter1/Introduction.tex}
+
+%CHAPTER 2
+\input{./Chapter2/LiteratureReview.tex}
+
+%CHAPTER 3
+\input{./Chapter3/Methodology.tex}
+
+%CHAPTER 4
+\input{./Chapter4/Results.tex}
+
+%CHAPTER 5
+\input{./Chapter5/Discussion.tex}
+
+% HOW TO ADD ADDITIONAL CHAPTERS
+% Step One: Add a new folder called "ChapterX" (X being the chapter number).
+% Step Two: Within the folder add a new .tex file by clicking the "New File" button in the Overleaf Menu. Rename the file to a title of your choice.
+% Step Three: Copy the Chapter 2 headline and "\input" command located above and insert it below Chapter 2.
+% Step Four: Rename the headline to your specific chapter number, change the input command to include the name of the folder you created and the name of the file you created.
+% Repeat this process for every chapter.
+
+%CONCLUSION CHAPTER
+\input{./Conclusion/Conclusion.tex}
+
+% ***************************************************
+% References
+%****************************************************
+
+%CHOOSE YOUR BIB STYLE AND FILE.
+%We have included the following two referencing styles for you to use in your thesis. You can add an alternate style if you prefer.
+
+%Style: apalike = this is an (Author, Year) referencing style similar to APA
+%Style: elsarticle-num = this is a numbered referencing style that will display the bibliography in citation order
+
+%To use one of the styles provided ensure the % is removed from the start of the line, and the other option is commented out with a % at the start of the line. The style elsarticle-num is active by default.
+
+%\bibliographystyle{apalike}
+\bibliographystyle{elsarticle-num}
+
+\bibliography{./References/References}
+
+\noindent
+Use the referencing style appropriate to your discipline—refer to the \href{https://guides.library.uq.edu.au/referencing}{\color{blue}{UQ Library's referencing style guide}} for details.  
+
+%When you have finished your thesis we recommend that you manually fix any errors in your bibliography. 
+%To do this, compile, copy the .bbl into a new .tex file and include this here after commenting out the other bibliography commands. Make corrections in that .tex file.
+
+% ***************************************************
+% Appendices
+%**************************************************** 
+
+%UNCOMMENT THIS SECTION IF YOU ARE USING APPENDICES.
+%Simply adapt the same formatting used for other chapters.
+\appendix
+% If you need appendix in your thesis then consider the following appendix file (you can add more if you need more) otherwise you should not consider it in your main thesis.
+\include{./Appendix/Appendix}
+
+\end{document}

@@ -1,0 +1,131 @@
+% ***************************************************
+% How to Use this Template
+% ***************************************************
+
+\noindent
+\textbf{\large Title Page}
+\begin{itemize}
+    \item Replace text enclosed in curly brackets \{ \} with your own content.
+    \item The thesis title should be formatted in sentence case (i.e. only the first word and proper nouns should be capitalised).
+    \item Present your name as it appears in your official UQ MySI-net record. Official name changes can be made through \href{https://my.uq.edu.au/contact/student-central}{\color{blue}{UQ Student Central}}.
+    \item The degrees listed must be tertiary degrees that have already been awarded. The name of the institution is not required. You cannot list the degree currently being examined.
+    \item Include the year of submission (month/day is not required).
+    \item List your enrolling unit. If you have any non-enrolling units (e.g., Centres), they must be placed on a new line below the enrolling unit’s name.
+    \item The UQ logo provided on the Title Page has been approved by UQ for use in all HDR theses. Other versions of the UQ logo will not be accepted. Please do not change the size of the logo.
+    \item You may add one additional image on the title page, provided it is small enough not to overwhelm the title information. Obtain copyright permission before inserting any image, and note any AI-generated images in the preliminary pages.
+    \item Please do not add any other content or change the formatting of the Title Page.
+\end{itemize}
+
+\vspace{0.3em}
+
+\noindent
+\textbf{\large Preliminary Pages}   
+\begin{itemize}
+\itemsep0em 
+    \item Do not modify the wording or format of any headings on the preliminary pages.
+    \item Retain all headings in the order provided in this template.
+    \item Replace text enclosed in curly brackets \{ \} with your own content.
+    \item Delete or replace any instructional text (displayed in purple) before submitting your thesis. In LaTeX you can quickly achieve this following the Instructions in MainThesis.tex.
+    % This instruction was given extra clarification for LaTeX use.
+\end{itemize}
+
+\vspace{0.3em}
+
+\noindent
+\textbf{\large Thesis Content Pages}   
+\begin{itemize}
+\itemsep0em 
+    \item The remainder of the template starting with ‘Table of Contents’ is offered as guidance only and is not intended to be prescriptive. You may adapt it to suit your discipline's requirements and conventions.
+    %Talking about Microsoft styles doesn't make sense for a LaTeX template, however it's not as easy as deleting this item because it also talks about auto-numbering
+    %\item The content pages that follow the preliminary pages are formatted using Microsoft Styles with embedded auto-numbering for chapters and headings. Page numbers have been incorporated to enable the automatic generation of the Table of Contents, as well as lists of tables and figures.
+    \item The content pages that follow the preliminary pages are formatted using styles defined in the uqthesis.cls class file, including auto-numbering for chapters and headings. Page numbers have been incorporated for the Table of Contents, as well as lists of tables and figures.
+    \item Following publishing conventions, this template uses Roman numerals for the preliminary pages and Arabic numerals for the main body. Adjust the numbering as required by your discipline; however, please ensure that the title page does not display a page number.
+    \item Mark each blank page in your thesis with: ``This page was intentionally left blank."
+\end{itemize}
+
+\clearpage
+\noindent
+\textbf{\large \LaTeX \,Instructions}
+
+\noindent
+This template has been designed with Overleaf, but can be used with a local distribution.
+\begin{itemize}
+    \item Compile \textbf{MainThesis.tex}, ensuring that you have all of the necessary packages.
+    \item Add or subtract packages in LaTexPackages.tex as needed for your thesis.
+    %Can this be reworded, or removed?
+    \item Insert the appropriate bibstyle and .bib files into MainThesis.tex to allow BibTeX to function correctly. A References.bib file, which you may use or replace, is in the \textbf{/References/} directory.
+    \item Add each chapter as a separate .tex file using input commands in MainThesis.tex. 
+    \item Chapter.tex files and associated figures should be kept in their own directory. 
+    \item Complete your list of abbreviations and symbols in Preliminary.tex. You may add TeX packages to assist this process.
+    \item When ready to submit, ensure that the document class in MainThesis.text is \textbf{final}, not \textbf{instructions}. This can be changed on lines 1 and 2.
+\end{itemize}
+
+\vspace{0.4em}
+
+\noindent
+\textbf{\large \LaTeX \,Files}
+
+\begin{itemize}
+    \item MainThesis.tex is the main file which receives the others as inputs.
+        \item The \textbf{/PreliminaryPages/} directory contains three .tex files: 
+        \begin{itemize}[after=\vspace{0pt}]
+        \item Abstract.tex contains instructions for compiling a stand-alone version of the abstract for submission purposes.
+        \item Authordeclaration.tex is the author declaration that must appear \textbf{verbatim} in your final thesis. \\ DO NOT EDIT!
+        \item Preliminary.tex contains the front matter, everything prior to the body of the document.     
+        \end{itemize}
+    \item The \textbf{/StylesAndSettings/} directory contains files to control various styling and settings
+        \begin{itemize}[after=\vspace{0pt}] 
+        \item uqthesis.cls loads necessary packages, sets page and heading styles, defines the line spread and redefines the $\sqrt{}$ command to improve readability by adjusting white space.
+        \item uqtitle.sty sets the title page style and defines storage commands, etc.
+        \item LaTexPackages.tex defines optional packages and text macros.
+        \item UQLogo.jpg is the UQ shield logo.
+        \item OrcidLogo.jpg is the Orcid logo.
+        \item abbrv-unsrt.bst is a numerical bibliographic citation style by E. Krepska providing short numerical citations in citation order. This is an example, you may choose your preferred or required style.
+        \item GNU\_License.txt is a copy of the GNU General Public License v3.
+        \end{itemize}
+
+
+    \item The \textbf{/Examples/} directory is for reference only. DO NOT INCLUDE any of these files in your thesis.
+\end{itemize}
+
+
+\noindent
+For further tips and advice, please see \href{https://my.uq.edu.au/information-and-services/higher-degree-research/my-thesis}{\color{blue}{UQ’s HDR Thesis Advice}}. If you have any questions regarding the template format or the required headings, please contact the UQ Graduate School via \href{mailto:graduateschool@uq.edu.au}{\color{blue}{graduateschool@uq.edu.au}}. The Library offers help with formatting via \href{mailto:training@library.uq.edu.au?subject=Overleaf Thesis Template help}{\color{blue}{training@library.uq.edu.au}}.
+
+% ***************************************************
+
+%\end{document}
+
+
+%*************************************
+%*****UQ LaTeX THESIS TEMPLATE********
+%*************************************
+% Copyright (C) 2025 The University of Queensland Graduate School
+% Last revision: 23 May 2025.
+
+%*************************************
+%*************LICENSING:**************
+%*************************************
+
+%The User acknowledges the existence of and agrees to comply with all relevant terms and conditions. In particular:
+
+%a.	The Graduate Thesis Template has been created using open-source software, the terms of which can be found below;
+%b.	Access to the Template through editor programs such as Overleaf requires compliance with the terms and conditions governing those editor programs. 
+%c.	The Template contains content that is the intellectual property of The University of Queensland, including copyright and protected marks, which must be respected in accordance with applicable laws;
+%d.	The University of Queensland does not collect any private data arising from the use of the Graduate Thesis Template.
+
+%This program is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License (GNU License can be located under the /StylesAndSettings/GNU_License.txt file) as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.
+
+%This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details. You should have received a copy of the GNU General Public License along with this program. If not, see <https://www.gnu.org/licenses/>.
+
+%*************************************
+%**********ACKNOWLEDGEMENTS:**********
+%*************************************
+
+%The latest version of this template has been updated by The University of Queensland Library. Thank you to Nicholas Wiggins, Cameron West, Stéphane Guillou, David Miles, Luke Gaiter and Michael Feeney for your involvement with this update.
+
+%Previous contributors include Elena Danilova, Trinity McNicol, James Nicholson, Hanna Reinebrant, Sanjib Mondal, Jan Mairhoefer, Preeti Vayada, Nick Fitt, Paul Cochrane, Will Petterrsen, James Bennett, Christiaan Bekker, Thomas Bell, Catxere Andrade Casacio, Nicolas Mauranyapin, Varun Prakash, and Alexander Stilgoe.
+
+% ***************************************************
+
+%\end{document}
